@@ -1,12 +1,12 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
-    name: "UnicodeMathClass",
+    name: "swift-unicode-math",
     products: [
         .library(
-            name: "UnicodeMathClass",
-            targets: ["UnicodeMathClass"]
+            name: "UnicodeMath",
+            targets: ["UnicodeMath"]
         ),
     ],
     dependencies: [
@@ -14,12 +14,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "UnicodeMathClass",
+            name: "UnicodeMath",
             dependencies: []
         ),
         .testTarget(
-            name: "UnicodeMathClassTests",
-            dependencies: ["UnicodeMathClass"]
+            name: "UnicodeMathTests",
+            dependencies: ["UnicodeMath"]
         ),
     ]
 )

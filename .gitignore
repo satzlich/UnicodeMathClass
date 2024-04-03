@@ -90,4 +90,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 MathClass.txt
+unicode-math-table.tex
 Package.resolved
+.swiftpm/
