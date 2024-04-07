@@ -47,3 +47,15 @@ public class MathSymbol {
 public func getMathClass(_ codepoint: UnicodeScalar) -> MathClass? {
     MATH_CLASSES[codepoint]
 }
+
+func generateSymbolMapFromCodepoint(from symbols: [MathSymbol]) -> [UnicodeScalar: MathSymbol] {
+    return symbols.reduce(into: [:]) { result, symbol in
+        result[symbol.codepoint] = symbol
+    }
+}
+
+func generateSymbolMapFromCommand(from symbols: [MathSymbol]) -> [String: MathSymbol] {
+    return symbols.reduce(into: [:]) { result, symbol in
+        result[symbol.command] = symbol
+    }
+}
