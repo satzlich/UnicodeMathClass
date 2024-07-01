@@ -5,6 +5,24 @@ Swift equivalent of [typst/unicode-math-class] plus [latex3/unicode-math table].
 * [typst/unicode-math-class]: Determine the Unicode class of a mathematical character.
 * [latex3/unicode-math table]: Define Unicode math symbols, associated LaTeX commands, etc.
 
+## Add Dependency
+
+```swift
+let package = Package(
+    // ...
+    dependencies: [
+        .package(url: "https://github.com/satzlich/swift-unicode-math", branch: "main"),
+    ],
+
+    // ...
+    // .target(
+    dependencies: [
+        .product(name: "unicode_math_class", package: "swift-unicode-math"),
+    ],
+)
+```
+
+
 ## Example
 
 ```swift
