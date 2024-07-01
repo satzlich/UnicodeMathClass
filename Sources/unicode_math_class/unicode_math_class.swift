@@ -3,7 +3,7 @@
 public let REVISION = 15
 
 /// Classification of a mathematical character.
-public enum MathClass: UInt8, Comparable, CaseIterable {
+public enum MathClass: Comparable, CaseIterable {
     case Normal
     case Alphabetic
     case Binary
@@ -19,10 +19,6 @@ public enum MathClass: UInt8, Comparable, CaseIterable {
     case Unary
     case Vary
     case Special
-
-    public static func < (lhs: MathClass, rhs: MathClass) -> Bool {
-        lhs.rawValue < rhs.rawValue
-    }
 }
 
 /// Determine the class of a mathematical character.
