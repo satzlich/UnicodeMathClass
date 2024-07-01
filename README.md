@@ -21,6 +21,7 @@ let package = Package(
     // ...
     // .target(
     dependencies: [
+        .product(name: "unicode_math", package: "swift-unicode-math"),
         .product(name: "unicode_math_class", package: "swift-unicode-math"),
     ],
 )
