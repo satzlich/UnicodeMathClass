@@ -1,5 +1,9 @@
 # swift-unicode-math
 
+[![Platform Compatibility](https://img.shields.io/badge/Platforms-iOS%20|%20macOS%20-brightgreen)](https://swift.org/platforms/)
+[![Swift Version](https://img.shields.io/badge/Swift-5.9+-orange)](https://swift.org)
+
+
 Swift equivalent of [typst/unicode-math-class] plus [latex3/unicode-math table].
 
 * [typst/unicode-math-class]: Determine the Unicode class of a mathematical character.
