@@ -1,17 +1,18 @@
-@testable import UnicodeMath
+@testable import unicode_math
+@testable import unicode_math_class
 import XCTest
 
 final class Tests: XCTestCase {
     func testUnicodeMathClass() {
-        XCTAssertEqual(getMathClass("0"), MathClass.Normal)
-        XCTAssertEqual(getMathClass("a"), MathClass.Alphabetic)
-        XCTAssertEqual(getMathClass("𝔸"), MathClass.Alphabetic)
-        XCTAssertEqual(getMathClass("+"), MathClass.Vary)
-        XCTAssertEqual(getMathClass("×"), MathClass.Binary)
-        XCTAssertEqual(getMathClass("("), MathClass.Opening)
-        XCTAssertEqual(getMathClass(","), MathClass.Punctuation)
-        XCTAssertEqual(getMathClass("|"), MathClass.Fence)
-        XCTAssertEqual(getMathClass("😃"), nil)
+        XCTAssertEqual(math_class("0"), MathClass.Normal)
+        XCTAssertEqual(math_class("a"), MathClass.Alphabetic)
+        XCTAssertEqual(math_class("𝔸"), MathClass.Alphabetic)
+        XCTAssertEqual(math_class("+"), MathClass.Vary)
+        XCTAssertEqual(math_class("×"), MathClass.Binary)
+        XCTAssertEqual(math_class("("), MathClass.Opening)
+        XCTAssertEqual(math_class(","), MathClass.Punctuation)
+        XCTAssertEqual(math_class("|"), MathClass.Fence)
+        XCTAssertEqual(math_class("😃"), nil)
     }
 
     func testUnicodeMathSymbol() {
@@ -23,6 +24,6 @@ final class Tests: XCTestCase {
 
         // LaTeX unicode-math marks it as `\mathclose`
         // Unicode MathClass marks it as `Normal`
-        XCTAssertEqual(getMathClass(symbol.codepoint), MathClass.Normal)
+        XCTAssertEqual(math_class(symbol.codepoint), MathClass.Normal)
     }
 }

@@ -5,18 +5,26 @@ let package = Package(
     name: "swift-unicode-math",
     products: [
         .library(
-            name: "UnicodeMath",
-            targets: ["UnicodeMath"]
+            name: "unicode_math",
+            targets: ["unicode_math"]
+        ),
+        .library(
+            name: "unicode_math_class",
+            targets: ["unicode_math_class"]
         ),
     ],
     targets: [
         .target(
-            name: "UnicodeMath",
+            name: "unicode_math",
+            dependencies: []
+        ),
+        .target(
+            name: "unicode_math_class",
             dependencies: []
         ),
         .testTarget(
             name: "UnicodeMathTests",
-            dependencies: ["UnicodeMath"]
+            dependencies: ["unicode_math", "unicode_math_class"]
         ),
     ]
 )

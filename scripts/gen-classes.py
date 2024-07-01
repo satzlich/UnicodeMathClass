@@ -3,7 +3,7 @@ import os
 
 URL = "https://www.unicode.org/Public/math/revision-15/MathClass-15.txt"
 INPUT = "MathClass.txt"
-OUTPUT = "Sources/UnicodeMath/Classes.swift"
+OUTPUT = "Sources/unicode_math_class/classes.swift"
 CLASSES = {
     "N": "Normal",
     "A": "Alphabetic",
